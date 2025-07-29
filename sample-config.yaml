@@ -1,0 +1,23 @@
+server:
+  host: "0.0.0.0"
+  port: 8080
+
+otp:
+  length: 6
+  format: 1  # Options: numeric (1), alphanumeric (2), alphabetic (3)
+  expiry: 300  # in seconds
+
+email:
+  provider: 2 # Options: SMTP (1), Microsoft Graph (2)
+  agent_email: "no-reply@example.com"
+
+smtp:
+  host: "smtp.example.com"
+  port: 587
+  username: "your_username"
+  password: "your_password"
+
+microsoft_graph:
+  tenant_id: "your_tenant_id"
+  client_id: "your_client_id"
+  client_secret: "your_client_secret"
