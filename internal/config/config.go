@@ -14,6 +14,7 @@ type Config struct {
 	Email          EmailConfig          `yaml:"email"`
 	Smtp           SMTPConfig           `yaml:"smtp"`
 	MicrosoftGraph MicrosoftGraphConfig `yaml:"microsoft_graph"`
+	Validation     ValidationConfig     `yaml:"validation"`
 }
 
 type ServerConfig struct {
@@ -43,6 +44,10 @@ type MicrosoftGraphConfig struct {
 	ClientID     string `yaml:"client_id"`
 	ClientSecret string `yaml:"client_secret"`
 	TenantID     string `yaml:"tenant_id"`
+}
+
+type ValidationConfig struct {
+	AllowedEmailRegex string `yaml:"allowed_email_regex"` // Regex pattern to validate email addresses
 }
 
 func LoadConfig() (*Config, error) {
